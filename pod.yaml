@@ -16,3 +16,18 @@ spec:
       ports:
         - containerPort: 8080
 ...
+
+---
+apiVersion: v1 
+kind: service
+metadata: 
+  name: my-sevrice
+spec:
+  selector:
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
+...
