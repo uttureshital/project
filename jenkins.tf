@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "jenkins_instance" {
-  ami           = "ami-0e5f882be1900e43b" 
+  ami           = "ami-0905a3c97561e0b69" 
   instance_type = "t2.micro"              
   tags = {
     Name = "jenkins-server"
