@@ -1,15 +1,15 @@
 provider "aws" {
-  region = "eu-west-2" 
+  region = "eu-west-1" 
 }
 
 resource "aws_instance" "jenkins_instance" {
   ami           = "ami-0e5f882be1900e43b" 
   instance_type = "t2.micro"              
   tags = {
-    Name = "jenkins-instance"
+    Name = "jenkins-server"
   }
 
-  key_name = "jenkins" 
+  key_name = "key" 
 
   user_data = <<-EOF
               #!/bin/bash
